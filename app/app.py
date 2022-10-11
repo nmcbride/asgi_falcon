@@ -2,7 +2,7 @@ import falcon.asgi
 
 
 class HelloWorldResource:
-    async def on_get(self, req, resp):
+    async def on_get(self, req: falcon.asgi.Request, resp: falcon.asgi.Response):
         resp.media = {"hello": "world"}
 
 

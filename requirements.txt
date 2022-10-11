@@ -1,3 +1,7 @@
 falcon>=3.*
 uvicorn
 click
+gunicorn
+asgiref
+rich
+rich-click
