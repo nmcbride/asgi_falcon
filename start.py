@@ -15,8 +15,7 @@ def cli():
 @click.option('--log-level', default='info', help='Log level to use.')
 def uvicorn(module, host, port, log_level):
     import uvicorn
-    log_level = log_level.lower()
-    uvicorn.run(module, host=host, port=port, log_level=log_level)
+    uvicorn.run(module, host=host, port=port, log_level=log_level.lower())
 
 
 if __name__ == '__main__':
