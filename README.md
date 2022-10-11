@@ -1,5 +1,5 @@
 # asgi_falcon
-This base image runs an ASGI Falcon application via Uvicorn.
+This base image runs an ASGI Falcon application via Uvicorn or Gunicorn.
 
 [Docker Hub](https://hub.docker.com/r/nomb85/asgi_falcon/tags)
 
