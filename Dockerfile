@@ -6,6 +6,8 @@ COPY ./requirements.txt /falcon_app/requirements.txt
 
 RUN pip install --no-cache-dir --upgrade -r /falcon_app/requirements.txt
 
+COPY ./start.py /falcon_app/start.py
 COPY ./app /falcon_app/app
 
-CMD ["uvicorn", "app.asgi:app", "--host", "0.0.0.0", "--port", "80"]
+ENTRYPOINT ["python", "start.py"]
+CMD ["uvicorn"]
