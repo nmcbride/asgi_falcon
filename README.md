@@ -54,7 +54,7 @@ To run overriding gunicorn options:
 $ podman run -d -p 8080:8080 --name asgi_falcon nomb85/asgi_falcon:latest gunicorn --host 0.0.0.0 --port 8080 --workers 4 --log-level info
 ```
 
-To view gunicornS options:
+To view gunicorn options:
 ```bash
 $ podman run --rm --name asgi_falcon nomb85/asgi_falcon:latest gunicorn --help
 
