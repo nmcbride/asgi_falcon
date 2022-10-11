@@ -1,7 +1,11 @@
 # asgi_falcon
 This base image runs an ASGI Falcon application via Uvicorn.
 
-[Docker Hub](https://hub.docker.com/r/nomb85/uvicorn_falcon)
+[Docker Hub](https://hub.docker.com/r/nomb85/asgi_falcon/tags)
+
+```bash
+podman pull docker.io/nomb85/asgi_falcon
+```
 
 ### Uvicorn
 
