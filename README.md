@@ -14,6 +14,10 @@ not wanting to use a process manager and instead handle it at the cluster level.
 
 To run uvicorn with defaults:
 ```bash
+$ podman run -d -p 8080:8080 --name asgi_falcon nomb85/asgi_falcon:latest
+```
+or
+```bash
 $ podman run -d -p 8080:8080 --name asgi_falcon nomb85/asgi_falcon:latest uvicorn
 ```
 
