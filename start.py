@@ -1,7 +1,9 @@
 #!/usr/bin/env python
 from abc import ABC
 
-import rich_click as click
+import ast
+import click
+
 import multiprocessing
 import uvicorn as unicorn  # lol
 import celery
@@ -11,9 +13,6 @@ from typing import Any, Callable, Dict, TYPE_CHECKING, Union
 
 if TYPE_CHECKING:
     from asgiref.typing import ASGIApplication
-
-from rich.traceback import install
-install(show_locals=True)
 
 
 def number_of_cpus():
@@ -136,6 +135,21 @@ def flower_command(app: str, broker: str, result_backend: str, address: str, por
 
     flower_args = ['flower', f'--address={address}', f'--port={port}']
     args = celery_args + flower_args
+    a.start(argv=args)
+
+
+class PythonLiteralOption(click.Option):
+    def type_cast_value(self, ctx, value):
+        try:
+            return ast.literal_eval(value)
+        except:
+            raise click.BadParameter(value)
+
+
+@celery_group.command()
+@click.option('--args', cls=PythonLiteralOption, default='["--version"]', help="Run a custom command.", show_default=True)
+def command(args):
+    a = celery.Celery()
     a.start(argv=args)
 
 
