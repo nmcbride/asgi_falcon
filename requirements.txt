@@ -5,3 +5,6 @@ gunicorn
 asgiref
 rich
 rich-click
+celery
+redis
+flower

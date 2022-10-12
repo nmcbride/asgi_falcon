@@ -6,6 +6,13 @@ This base image runs an ASGI Falcon application via Uvicorn or Gunicorn.
 ```bash
 podman pull docker.io/nomb85/asgi_falcon
 ```
+### Celery
+
+This branch provides an additional command to run a celery worker.
+
+### Uvicorn
+
+```bash
 
 ### Uvicorn
 
