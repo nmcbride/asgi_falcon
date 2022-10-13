@@ -1,5 +1,5 @@
 # asgi_falcon
-This base image runs an ASGI Falcon application via Uvicorn or Gunicorn.
+A container to run your Falcon ASGI application that contains uvicorn, gunicorn, celery and flower.
 
 [Github](https://github.com/nmcbride/asgi_falcon) | [Docker Hub](https://hub.docker.com/r/nmcbride/asgi_falcon)
 
