@@ -131,10 +131,6 @@ $ podman run --rm nomb85/asgi_falcon:beta celery command --args '["--version"]'
 ```
 
 ```bash
-
-```
-
-```bash
 Usage: start.py celery command [OPTIONS]
 
 Options:
