@@ -1,7 +1,7 @@
 # asgi_falcon
 A container to run your Falcon ASGI application that contains uvicorn, gunicorn, celery and flower.
 
-[Github](https://github.com/nmcbride/asgi_falcon) | [Docker Hub](https://hub.docker.com/r/nmcbride/asgi_falcon)
+[Github](https://github.com/nmcbride/asgi_falcon) | [Docker Hub](https://hub.docker.com/r/nomb85/asgi_falcon)
 
 ```bash
 podman pull docker.io/nomb85/asgi_falcon
